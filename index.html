@@ -16,7 +16,7 @@
                 <div class="col text-right">
                     <select name="" id="">
                         <option value="">Select a type of media ...</option>
-                        <option value=""></option>
+                        <option v-for="item in uniqueItemsList">{{ item }}</option>
                     </select>
                 </div>
             </div>

@@ -63,4 +63,16 @@ new Vue({
     title: 'My media collection',
     mediaList: media,
   },
+
+  computed: {
+    uniqueItemsList: function () {
+      const types = [];
+      this.mediaList.forEach((item) => {
+        if (!types.includes(item.type)) {
+          types.push(item.type);
+        }
+      });
+      return types;
+    },
+  },
 });
