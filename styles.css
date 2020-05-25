@@ -75,3 +75,26 @@ li + li {
 .text-right {
   text-align: right;
 }
+
+/* ---------------------- */
+
+li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  height: 1rem;
+  width: 1rem;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.open::after {
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+}
+
+.closed::after {
+  border-bottom: 5px solid #000;
+  border-right: 5px solid #000;
+}

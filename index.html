@@ -21,7 +21,8 @@
                 </div>
             </div>
             <ul v-for="item in mediaList">
-                <li v-on:click="item.showDetail = !item.showDetail" v-show="type === '' || item.type === type">
+                <li v-on:click="item.showDetail = !item.showDetail" v-show="type === '' || item.type === type"
+                    v-bind:class="item.showDetail ? 'open' : 'closed'">
                     <h3>{{ item.title }}</h3>
                     <div v-show="item.showDetail">
                         <p>{{ item.description }}</p>
