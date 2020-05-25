@@ -14,14 +14,14 @@
             <div class="flex-grid">
                 <h1 class="col">{{ title }}</h1>
                 <div class="col text-right">
-                    <select name="" id="">
+                    <select v-on:change="filterList">
                         <option value="">Select a type of media ...</option>
                         <option v-for="item in uniqueItemsList">{{ item }}</option>
                     </select>
                 </div>
             </div>
             <ul v-for="item in mediaList">
-                <li v-on:click="item.showDetail = !item.showDetail">
+                <li v-on:click="item.showDetail = !item.showDetail" v-show="item.type === type">
                     <h3>{{ item.title }}</h3>
                     <div v-show="item.showDetail">
                         <p>{{ item.description }}</p>

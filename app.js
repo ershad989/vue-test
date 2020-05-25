@@ -62,6 +62,7 @@ new Vue({
   data: {
     title: 'My media collection',
     mediaList: media,
+    type: '',
   },
 
   computed: {
@@ -73,6 +74,12 @@ new Vue({
         }
       });
       return types;
+    },
+  },
+
+  methods: {
+    filterList: function () {
+      this.type = event.target.value;
     },
   },
 });
