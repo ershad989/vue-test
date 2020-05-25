@@ -22,7 +22,7 @@
             </div>
             <ul v-for="item in mediaList">
                 <li v-on:click="item.showDetail = !item.showDetail" v-show="type === '' || item.type === type"
-                    v-bind:class="item.showDetail ? 'open' : 'closed'">
+                    v-bind:class="[item.showDetail ? 'open' : 'closed', (item.type.toLowerCase()).split(' ')[0]]">
                     <h3>{{ item.title }}</h3>
                     <div v-show="item.showDetail">
                         <p>{{ item.description }}</p>

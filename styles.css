@@ -76,7 +76,7 @@ li + li {
   text-align: right;
 }
 
-/* ---------------------- */
+/* -------- arrows ---------- */
 
 li::after {
   content: '';
@@ -97,4 +97,18 @@ li::after {
 .closed::after {
   border-bottom: 5px solid #000;
   border-right: 5px solid #000;
+}
+
+/* -------- data-type colors --------- */
+
+.short {
+  border-left-color: #ce93d8;
+}
+
+.dvd {
+  border-left-color: #7986cb;
+}
+
+.book {
+  border-left-color: #f06292;
 }
