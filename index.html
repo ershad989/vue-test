@@ -21,7 +21,7 @@
                 </div>
             </div>
             <ul v-for="item in mediaList">
-                <li v-on:click="item.showDetail = !item.showDetail" v-show="item.type === type">
+                <li v-on:click="item.showDetail = !item.showDetail" v-show="type === '' || item.type === type">
                     <h3>{{ item.title }}</h3>
                     <div v-show="item.showDetail">
                         <p>{{ item.description }}</p>
