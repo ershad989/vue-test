@@ -10,6 +10,26 @@
 
 <body>
     <div class="container">
+        <div id="media-list">
+            <div class="flex-grid">
+                <h1 class="col">{{ title }}</h1>
+                <div class="col text-right">
+                    <select name="" id="">
+                        <option value="">Select a type of media ...</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <ul v-for="item in mediaList">
+                <li>
+                    <h3>{{ item.title }}</h3>
+                    <div>
+                        <p>{{ item.description }}</p>
+                        <p>By: {{ item.contributor }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
