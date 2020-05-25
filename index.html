@@ -21,9 +21,9 @@
                 </div>
             </div>
             <ul v-for="item in mediaList">
-                <li>
+                <li v-on:click="item.showDetail = !item.showDetail">
                     <h3>{{ item.title }}</h3>
-                    <div>
+                    <div v-show="item.showDetail">
                         <p>{{ item.description }}</p>
                         <p>By: {{ item.contributor }}</p>
                     </div>
